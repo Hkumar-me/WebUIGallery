@@ -3,11 +3,10 @@ let page1Center = document.querySelector(".page1-center");
 let tl1 = gsap.timeline({
   scrollTrigger: {
     trigger: "#page1",
-    markers: true,
     scrub: 2,
     pin: true,
     start: "top top",
-    end: "bottom -200%",
+    end: "top -300%",
   },
 });
 
@@ -64,9 +63,6 @@ tl1
     },
     "atOnce"
   )
-  .to(".nav, .page1-btm", {
-    opacity: 0,
-  })
   .to(
     ".lp1",
     {
@@ -83,13 +79,13 @@ tl1
     "atOnce2"
   )
   .to(".lp-text1", {
-    transform: "translateX(-200%)",
-    duration: 25,
+    transform: "translateX(-300%)",
+    duration: 15,
+    ease:Power1
   })
   .to(".lp-text2", {
     opacity: 1,
     duration: 10,
-    width: "100%",
   })
   .to(".lp-text2-line", {
     width: "100%",
